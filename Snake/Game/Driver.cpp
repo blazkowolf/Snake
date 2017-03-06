@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Display\Window.h"
-#include "Input\Input.h"
+#include "..\Display\Window.h"
+#include "..\Input\Input.h"
 
 int main ( int argc, char *argv[] ) {
 	std::cout << "Hello World!" << std::endl;
@@ -10,8 +10,8 @@ int main ( int argc, char *argv[] ) {
 	while ( win.IsRunning() ) {
 
 		win.Clear();
-		win.Update();
 		Input::HandleInput();
+		win.Update();
 
 	}
 

@@ -1,5 +1,6 @@
 #include "Window.h"
 #include <iostream>
+#include <SDL2\SDL_image.h>
 #include "..\Input\Input.h"
 #include "..\Event\Event.h"
 
@@ -9,8 +10,6 @@ Window::Window ( unsigned int width, unsigned int height, const std::string& tit
 	this->title = title;
 	/* Store close window behavior */
 	Event::StoreBehavior( "CloseWindow", [=]() { Close(); } );
-	/* Initialize keyboard key states */
-	//Input::Init();
 	/* Initialize SDL */
 	if ( SDL_Init( SDL_INIT_EVERYTHING ) < 0 ) {
 		std::cout << "SDL failed to initialize! SDL Error: " << SDL_GetError() << std::endl;
@@ -26,6 +25,11 @@ Window::Window ( unsigned int width, unsigned int height, const std::string& tit
 	rendererHandle = SDL_CreateRenderer( winHandle, -1, SDL_RENDERER_SOFTWARE );
 	if ( rendererHandle == NULL ) {
 		std::cout << "Renderer creation failed! SDL Error: " << SDL_GetError() << std::endl;
+		exit( EXIT_FAILURE );
+	}
+	/* Initialize the SDL image library for PNG loading */
+	if ( !( IMG_Init( IMG_INIT_PNG ) & IMG_INIT_PNG ) ) {
+		std::cout << "SDL_image failed to initialize! SDL_image Error: " << IMG_GetError() << std::endl;
 		exit( EXIT_FAILURE );
 	}
 }

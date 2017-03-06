@@ -117,12 +117,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Display\Window.cpp" />
-    <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="Game\Driver.cpp" />
     <ClCompile Include="Event\Event.cpp" />
+    <ClCompile Include="Game\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Display\Window.h" />
     <ClInclude Include="Event\Event.h" />
+    <ClInclude Include="Game\Map.h" />
+    <ClInclude Include="Game\Tile.h" />
     <ClInclude Include="Input\Input.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
