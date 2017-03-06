@@ -119,6 +119,7 @@
     <ClCompile Include="Display\Window.cpp" />
     <ClCompile Include="Game\Driver.cpp" />
     <ClCompile Include="Event\Event.cpp" />
+    <ClCompile Include="Game\Map.cpp" />
     <ClCompile Include="Game\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>

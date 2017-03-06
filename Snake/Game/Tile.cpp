@@ -2,6 +2,9 @@
 #include <iostream>
 #include <SDL2\SDL_image.h>
 
+Tile::Tile () {
+}
+
 Tile::Tile ( unsigned int x, unsigned int y, unsigned int width, unsigned int height, SDL_Texture *tex ) {
 	this->x = x; this->y = y;
 	this->width = width; this->height = height;

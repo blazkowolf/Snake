@@ -11,6 +11,7 @@ class Tile {
 		SDL_Texture	*tex;
 
 	public:
+		Tile ();
 		Tile ( unsigned int x, unsigned int y, unsigned int width, unsigned int height, SDL_Texture *tex );
 		void Render ( const Window& win );
 		inline unsigned int GetWidth () { return width; }

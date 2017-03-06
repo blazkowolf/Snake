@@ -1,14 +1,17 @@
 #pragma once
 
+#include "Tile.h"
+
 class Map {
 
 	private:
-		unsigned int grid[32 * 18];
+		Tile map[32 * 18];
 
 	public:
-		Map ();
+		Map ( unsigned int *grid );
 		const unsigned int NUM_X_TILES_ACROSS = 32;
 		const unsigned int NUM_Y_TILES_ACROSS = 18;
-		inline unsigned int GetTile ( unsigned int x, unsigned int y ) { return grid[y*NUM_X_TILES_ACROSS + x]; }
+		inline Tile& GetTile ( unsigned int x, unsigned int y ) { return map[y*NUM_X_TILES_ACROSS + x]; }
+		void Render ();
 
 };
