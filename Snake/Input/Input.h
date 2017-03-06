@@ -21,6 +21,9 @@ class Input {
 							case SDLK_ESCAPE:
 								Event::Call( "CloseWindow" );
 								break;
+							case SDLK_RETURN:
+								Event::Call( "UpdateApple" );
+								break;
 						}
 				}
 			}
