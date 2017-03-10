@@ -12,6 +12,7 @@ class Map {
 
 	public:
 		Map ( unsigned int *grid, const Window& win );
+		~Map ();
 		const unsigned int NUM_X_TILES_ACROSS = 32;
 		const unsigned int NUM_Y_TILES_ACROSS = 18;
 		inline Tile& GetTile ( unsigned int x, unsigned int y ) { return map[y*NUM_X_TILES_ACROSS + x]; }

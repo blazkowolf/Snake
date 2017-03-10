@@ -24,6 +24,17 @@ class Input {
 							case SDLK_RETURN:
 								Event::Call( "UpdateApple" );
 								break;
+							case SDLK_UP:
+								Event::Call( "MoveUp" );
+								break;
+							case SDLK_DOWN:
+								Event::Call( "MoveDown" );
+								break;
+							case SDLK_LEFT:
+								Event::Call( "MoveLeft" );
+								break;
+							case SDLK_RIGHT:
+								Event::Call( "MoveRight" );
 						}
 				}
 			}

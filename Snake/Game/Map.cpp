@@ -27,6 +27,10 @@ Map::Map ( unsigned int *grid, const Window& win ) {
 	Update();
 }
 
+Map::~Map () {
+	SDL_DestroyTexture( apple );
+}
+
 void Map::Update () {
 	map[( rand() % 18 )*NUM_X_TILES_ACROSS + ( rand() % 32 )].SetTexture( apple );
 }

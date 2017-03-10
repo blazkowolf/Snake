@@ -120,12 +120,14 @@
     <ClCompile Include="Game\Driver.cpp" />
     <ClCompile Include="Event\Event.cpp" />
     <ClCompile Include="Game\Map.cpp" />
+    <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Game\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Display\Window.h" />
     <ClInclude Include="Event\Event.h" />
     <ClInclude Include="Game\Map.h" />
+    <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Game\Tile.h" />
     <ClInclude Include="Input\Input.h" />
   </ItemGroup>

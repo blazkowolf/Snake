@@ -13,6 +13,7 @@ class Tile {
 	public:
 		Tile ();
 		Tile ( unsigned int x, unsigned int y, unsigned int width, unsigned int height, SDL_Texture *tex, SDL_Texture *bg );
+		~Tile ();
 		void Render ( const Window& win );
 		inline void SetTexture ( SDL_Texture *tex ) { this->tex = tex; }
 		inline void setBGTexture ( SDL_Texture *bg ) { this->bg = bg; }
