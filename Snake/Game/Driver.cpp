@@ -28,10 +28,9 @@ int main ( int argc, char *argv[] ) {
 		map.Render( win );
 		player.Render( win );
 		Input::HandleInput();
+		std::cout << "tilex: " << player.GetTileX() << "\ttiley: " << player.GetTileY() << std::endl;
 		win.Update();
 		player.Update();
-
-		
 
 	}
 

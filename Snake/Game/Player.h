@@ -6,11 +6,11 @@
 class Player {
 
 	private:
-		float screenX, screenY;
+		unsigned int screenX, screenY;
 		unsigned int tileX, tileY;
 		unsigned int width, height;
 		unsigned int moveSpeed;
-		unsigned int xDir, yDir;
+		int xDir, yDir;
 		/* Number of tiles the snake's body occupies */
 		unsigned int length;
 		std::vector<std::pair<unsigned int, unsigned int>> bodyTiles;
@@ -25,5 +25,7 @@ class Player {
 		inline float GetY () { return screenY; }
 		inline unsigned int GetTileX () { return tileX; }
 		inline unsigned int GetTileY () { return tileY; }
+		inline int GetXDir () { return xDir; }
+		inline int GetYDir () { return yDir; }
 
 };
