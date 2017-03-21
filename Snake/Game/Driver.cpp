@@ -27,13 +27,13 @@ int main ( int argc, char *argv[] ) {
 	float totalTime = 0.0f;	// In seconds
 	float delay = 0.05f;	// In seconds
 
-	win.SetClearColor( 0xff0000ff );
+	//win.SetClearColor( 0xff0000ff );
 	while ( win.IsRunning() ) {
 
 		totalTime += ( ( SDL_GetTicks() - currentTime ) / 1000.0f );
 		currentTime = SDL_GetTicks();
 
-		win.Clear();
+		//win.Clear();
 		map.Render( win );
 		player.Render( win );
 		Input::HandleInput();
