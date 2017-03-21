@@ -20,8 +20,8 @@ Player::~Player () {
 
 void Player::Update () {
 	//tileX += xDir*moveSpeed; tileY += yDir*moveSpeed;
-	tileX = std::max( ( unsigned int ) 0, std::min( tileX + xDir, ( unsigned int ) 31 ) );
-	tileY = std::max( ( unsigned int ) 0, std::min( tileY + yDir, ( unsigned int ) 17 ) );
+	tileX = std::max( 0, std::min( ( int ) tileX + xDir, 31 ) );
+	tileY = std::max( 0, std::min( ( int ) tileY + yDir, 17 ) );
 	screenX = tileX*width; screenY = tileY*height;
 }
 

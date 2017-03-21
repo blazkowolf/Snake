@@ -23,16 +23,27 @@ int main ( int argc, char *argv[] ) {
 		player.Update();
 	};
 
+	Uint32 currentTime = SDL_GetTicks();
+	float totalTime = 0.0f;
+	float delay = 0.05f; // In seconds
+
 	win.SetClearColor( 0xff0000ff );
 	while ( win.IsRunning() ) {
+
+		totalTime += ( ( SDL_GetTicks() - currentTime ) / 1000.0f );
+		currentTime = SDL_GetTicks();
 
 		win.Clear();
 		map.Render( win );
 		player.Render( win );
 		Input::HandleInput();
-		Update();
 
-		//SDL_Delay( 50 );
+		std::cout << "Total Time: " << totalTime << std::endl;
+
+		if ( totalTime > delay ) {
+			totalTime = 0.0f;
+			Update();
+		}
 
 	}
 
