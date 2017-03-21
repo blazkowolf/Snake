@@ -24,8 +24,8 @@ int main ( int argc, char *argv[] ) {
 	};
 
 	Uint32 currentTime = SDL_GetTicks();
-	float totalTime = 0.0f;
-	float delay = 0.05f; // In seconds
+	float totalTime = 0.0f;	// In seconds
+	float delay = 0.05f;	// In seconds
 
 	win.SetClearColor( 0xff0000ff );
 	while ( win.IsRunning() ) {
@@ -37,8 +37,6 @@ int main ( int argc, char *argv[] ) {
 		map.Render( win );
 		player.Render( win );
 		Input::HandleInput();
-
-		std::cout << "Total Time: " << totalTime << std::endl;
 
 		if ( totalTime > delay ) {
 			totalTime = 0.0f;
