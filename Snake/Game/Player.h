@@ -9,7 +9,6 @@ class Player {
 		unsigned int screenX, screenY;
 		unsigned int tileX, tileY;
 		unsigned int width, height;
-		unsigned int moveSpeed;
 		int xDir, yDir;
 		/* Number of tiles the snake's body occupies */
 		unsigned int length;
@@ -21,8 +20,8 @@ class Player {
 		~Player ();
 		void Update ();
 		void Render ( const Window& win );
-		inline float GetX () { return screenX; }
-		inline float GetY () { return screenY; }
+		inline unsigned int GetX () { return screenX; }
+		inline unsigned int GetY () { return screenY; }
 		inline unsigned int GetTileX () { return tileX; }
 		inline unsigned int GetTileY () { return tileY; }
 		inline int GetXDir () { return xDir; }

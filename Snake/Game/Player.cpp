@@ -6,7 +6,6 @@ Player::Player ( unsigned int tileX, unsigned int tileY, unsigned int width, uns
 	this->tileX = tileX; this->tileY = tileY;
 	this->width = width; this->height = height;
 	screenX = tileX*width; screenY = tileY*height;
-	moveSpeed = 1;
 	xDir = 0; yDir = 1;
 	this->body = tex;
 	Event::StoreBehavior( "MoveUp", [&]() { xDir = 0; yDir = -1; } );
@@ -20,13 +19,10 @@ Player::~Player () {
 }
 
 void Player::Update () {
-	tileX += xDir; tileY += yDir;
-	tileX = std::max( 0, std::min( ( int ) tileX + xDir, 31 ) );
-	tileY = std::max( 0, std::min( ( int ) tileY + yDir, 17 ) );
+	//tileX += xDir*moveSpeed; tileY += yDir*moveSpeed;
+	tileX = std::max( ( unsigned int ) 0, std::min( tileX + xDir, ( unsigned int ) 31 ) );
+	tileY = std::max( ( unsigned int ) 0, std::min( tileY + yDir, ( unsigned int ) 17 ) );
 	screenX = tileX*width; screenY = tileY*height;
-	/*screenX += xDir*moveSpeed;
-	screenY += yDir*moveSpeed;
-	tileX = screenX / width; tileY = screenY / height;*/
 }
 
 void Player::Render ( const Window& win ) {

@@ -8,10 +8,11 @@ class Map {
 	private:
 		Tile map[32 * 18];
 		unsigned int tileSizeX, tileSizeY;
-		SDL_Texture *apple;
+		SDL_Texture *apple, *bg;
+		unsigned int appleX, appleY;
 
 	public:
-		Map ( unsigned int *grid, const Window& win );
+		Map ( const Window& win );
 		~Map ();
 		const unsigned int NUM_X_TILES_ACROSS = 32;
 		const unsigned int NUM_Y_TILES_ACROSS = 18;
