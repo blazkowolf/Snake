@@ -25,16 +25,16 @@ class Input {
 								Event::Call( "UpdateApple" );
 								break;
 							case SDLK_UP:
-								Event::Call( "MoveUp" );
+								Event::Call( "MoveNorth" );
 								break;
 							case SDLK_DOWN:
-								Event::Call( "MoveDown" );
+								Event::Call( "MoveSouth" );
 								break;
 							case SDLK_LEFT:
-								Event::Call( "MoveLeft" );
+								Event::Call( "MoveWest" );
 								break;
 							case SDLK_RIGHT:
-								Event::Call( "MoveRight" );
+								Event::Call( "MoveEast" );
 						}
 				}
 			}

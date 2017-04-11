@@ -20,7 +20,7 @@ Map::Map ( const Window& win ) {
 	bg = SDL_CreateTextureFromSurface( win.GetRenderer(), backgroundSurface );
 	for ( size_t y = 0; y < 18; y++ ) {
 		for ( size_t x = 0; x < 32; x++ ) {
-			map[y*NUM_X_TILES_ACROSS + x] = Tile( x*tileSizeX, y*tileSizeY, tileSizeX, tileSizeY, bg );
+			map[y*NUM_X_TILES_ACROSS + x] = Tile( x*tileSizeX, y*tileSizeY, tileSizeX, tileSizeY, 0.0f, bg );
 		}
 	}
 	SDL_FreeSurface( backgroundSurface );
