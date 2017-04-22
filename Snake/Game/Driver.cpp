@@ -42,7 +42,7 @@ int main ( int argc, char *argv[] ) {
 
 	Uint32 currentTime = SDL_GetTicks();
 	float totalTime = 0.0f;	// In seconds
-	float delay = 1.0f;	// In seconds
+	float delay = 0.05f;	// In seconds
 
 	//win.SetClearColor( 0xff0000ff );
 	while ( win.IsRunning() ) {

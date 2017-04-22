@@ -12,7 +12,7 @@ class Player {
 		unsigned int width, height;
 		int xDir, yDir;
 		int lastxDir, lastyDir;
-		float angle;
+		float angle, lastAngle;
 		/* Number of tiles the snake's body occupies */
 		unsigned int length;
 		//std::vector<std::pair<unsigned int, unsigned int>> bodyTiles;
