@@ -19,6 +19,8 @@ class Map {
 		inline Tile& GetTile ( unsigned int x, unsigned int y ) { return map[y*NUM_X_TILES_ACROSS + x]; }
 		inline unsigned int GetTileSizeX () { return tileSizeX; }
 		inline unsigned int GetTileSizeY () { return tileSizeY; }
+		inline unsigned int GetAppleX () { return appleX; }
+		inline unsigned int GetAppleY () { return appleY; }
 		void Update ();
 		void Render ( const Window& win );
 

@@ -50,6 +50,11 @@ int main ( int argc, char *argv[] ) {
 		totalTime += ( ( SDL_GetTicks() - currentTime ) / 1000.0f );
 		currentTime = SDL_GetTicks();
 
+		if ( player.GetTileX() == map.GetAppleX() && player.GetTileY() == map.GetAppleY() ) {
+			player.AddTile();
+			Event::Call( "UpdateApple" );
+		}
+
 		//win.Clear();
 		map.Render( win );
 		player.Render( win );

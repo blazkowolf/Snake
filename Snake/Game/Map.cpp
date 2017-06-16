@@ -7,7 +7,7 @@
 Map::Map ( const Window& win ) {
 	Event::StoreBehavior( "UpdateApple", [=]() { Update(); } );
 	tileSizeX = 1280 / 32; tileSizeY = 720 / 18;
-	SDL_Surface *appleSurface = IMG_Load( "./Res/Images/Meg.png" );
+	SDL_Surface *appleSurface = IMG_Load( "./Res/Images/Apple.png" );
 	if ( appleSurface == NULL ) {
 		std::cerr << "Failed to load image! SDL_image Error: " << IMG_GetError() << std::endl;
 	}

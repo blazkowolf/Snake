@@ -25,6 +25,7 @@ class Player {
 		~Player ();
 		void Update ();
 		void Render ( const Window& win );
+		void AddTile ();
 		inline void SetAngle ( float angle ) { this->angle = angle; }
 		inline unsigned int GetX () { return screenX; }
 		inline unsigned int GetY () { return screenY; }

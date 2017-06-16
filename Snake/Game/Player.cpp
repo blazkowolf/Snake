@@ -123,3 +123,9 @@ void Player::Render ( const Window& win ) {
 		bodyTiles[i].Render( win );
 	}
 }
+
+void Player::AddTile () {
+	++length;
+	bodyTiles.push_back( Tile( tileX*width, ( tileY - length - 1 )*height, width, height, bodyTiles.back().GetAngle(), tail ) );
+	bodyTiles[length - 2].SetTexture( bodyStraight );
+}
