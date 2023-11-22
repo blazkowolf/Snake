@@ -1,8 +1,8 @@
 #pragma once
 
-#include <SDL2\SDL.h>
+#include <SDL2/SDL.h>
 #include <string>
-#include "..\Display\Window.h"
+#include "../Display/Window.h"
 
 class Tile {
 

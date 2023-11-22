@@ -1,7 +1,7 @@
 #include "Player.h"
 #include <algorithm>
 #include <iostream>
-#include "..\Event\Event.h"
+#include "../Event/Event.h"
 
 Player::Player ( unsigned int tileX, unsigned int tileY, unsigned int width, unsigned int height, SDL_Texture *head, SDL_Texture *bodyStraight, SDL_Texture *bodyAngle, SDL_Texture *tail ) {
 	this->tileX = tileX; this->tileY = tileY;

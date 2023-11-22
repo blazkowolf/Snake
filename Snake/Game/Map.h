@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Tile.h"
-#include "..\Display\Window.h"
+#include "../Display/Window.h"
 
 class Map {
 

@@ -1,14 +1,13 @@
 #include <iostream>
-#include <SDL2\SDL_timer.h>
-#include <SDL2\SDL_image.h>
-#include "..\Display\Window.h"
-#include "..\Input\Input.h"
+#include <SDL2/SDL_timer.h>
+#include <SDL2/SDL_image.h>
+#include "../Display/Window.h"
+#include "../Input/Input.h"
 #include "Tile.h"
 #include "Map.h"
 #include "Player.h"
 
 int main ( int argc, char *argv[] ) {
-	std::cout << "Hello World!" << std::endl;
 	Window win( 1280, 720, "Snake" );
 	Map map( win );
 	SDL_Surface *playerHead = IMG_Load( "./Res/Images/SnakeHead.png" );

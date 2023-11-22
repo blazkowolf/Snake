@@ -1,8 +1,8 @@
 #include "Map.h"
-#include <SDL2\SDL_image.h>
+#include <SDL2/SDL_image.h>
 #include <iostream>
 #include <stdlib.h>
-#include "..\Event\Event.h"
+#include "../Event/Event.h"
 
 Map::Map ( const Window& win ) {
 	Event::StoreBehavior( "UpdateApple", [=]() { Update(); } );

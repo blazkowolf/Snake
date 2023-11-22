@@ -1,8 +1,8 @@
 #include "Window.h"
 #include <iostream>
-#include <SDL2\SDL_image.h>
-#include "..\Input\Input.h"
-#include "..\Event\Event.h"
+#include <SDL2/SDL_image.h>
+#include "../Input/Input.h"
+#include "../Event/Event.h"
 
 Window::Window ( unsigned int width, unsigned int height, const std::string& title ) {
 	running = true;
@@ -42,10 +42,10 @@ Window::~Window () {
 
 void Window::SetClearColor ( Uint32 color ) {
 	Uint8 r, g, b, a;
-	r = ( color >> 24 ) & 0xff;
-	g = ( color >> 16 ) & 0x00ff;
-	b = ( color >> 8 ) & 0x0000ff;
-	a = ( color >> 0 ) & 0x000000ff;
+	r = ( color >> (3 * 8) ) & 0xff;
+	g = ( color >> (2 * 8) ) & 0xff;
+	b = ( color >> (1 * 8) ) & 0xff;
+	a = ( color >> (0 * 8) ) & 0xff;
 	SDL_SetRenderDrawColor( rendererHandle, r, g, b, a );
 }
 
